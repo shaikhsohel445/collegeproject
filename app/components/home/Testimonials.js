@@ -1,5 +1,6 @@
 "use client"
 import { useState } from "react"
+import Image from "next/image"
 import { Star, ChevronLeft, ChevronRight, Quote } from "lucide-react"
 
 const Testimonials = () => {
@@ -12,7 +13,7 @@ const Testimonials = () => {
       year: "2020",
       image: "/placeholder.svg?height=80&width=80&text=PS",
       rating: 5,
-      text: "Lokmanya Tilak College provided me with an excellent foundation for my career. The faculty's dedication and the college's focus on practical learning helped me secure a great job right after graduation.",
+      text: "Lokmanya Tilak College provided me with an excellent foundation for my career. The faculty&rsquo;s dedication and the college&rsquo;s focus on practical learning helped me secure a great job right after graduation.",
     },
     {
       name: "Rahul Patil",
@@ -28,7 +29,7 @@ const Testimonials = () => {
       year: "2023",
       image: "/placeholder.svg?height=80&width=80&text=AD",
       rating: 5,
-      text: "As a parent, I'm impressed with the college's commitment to student welfare and development. The regular communication and transparent processes give me confidence in my child's education.",
+      text: "As a parent, I&apos;m impressed with the college&rsquo;s commitment to student welfare and development. The regular communication and transparent processes give me confidence in my child&rsquo;s education.",
     },
     {
       name: "Vikram Singh",
@@ -71,16 +72,19 @@ const Testimonials = () => {
               </div>
 
               <div className="pt-8">
-                <img
-                  src={testimonials[currentTestimonial].image || "/placeholder.svg"}
-                  alt={testimonials[currentTestimonial].name}
-                  className="w-20 h-20 rounded-full mx-auto mb-4 object-cover"
-                />
+                <div className="w-20 h-20 mx-auto mb-4 rounded-full overflow-hidden relative">
+                  <Image
+                    src={testimonials[currentTestimonial].image || "/placeholder.svg"}
+                    alt={testimonials[currentTestimonial].name}
+                    layout="fill"
+                    objectFit="cover"
+                  />
+                </div>
 
                 <div className="flex justify-center mb-4">{renderStars(testimonials[currentTestimonial].rating)}</div>
 
                 <p className="text-body text-lg italic mb-6 leading-relaxed">
-                  "{testimonials[currentTestimonial].text}"
+                  &ldquo;{testimonials[currentTestimonial].text}&rdquo;
                 </p>
 
                 <div>

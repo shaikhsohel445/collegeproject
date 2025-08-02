@@ -73,7 +73,7 @@ const ContactForm = () => {
           <div className="text-center mb-12">
             <h2 className="heading-secondary">Send us a Message</h2>
             <p className="text-body text-lg">
-              Have a question or need assistance? Fill out the form below and we'll get back to you soon.
+              Have a question or need assistance? Fill out the form below and we&apos;ll get back to you soon.
             </p>
           </div>
 

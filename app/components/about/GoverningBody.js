@@ -1,83 +1,86 @@
-import { Users, Crown, Award, Briefcase } from "lucide-react"
+'use client'
+
+import Image from 'next/image'
+import { Users, Crown, Award, Briefcase } from 'lucide-react'
 
 const GoverningBody = () => {
   const members = [
     {
-      name: "Shri [Chairman Name]",
-      position: "Chairman",
-      category: "Management",
-      qualification: "M.A., LL.B.",
-      experience: "30+ years in Education Administration",
+      name: 'Shri [Chairman Name]',
+      position: 'Chairman',
+      category: 'Management',
+      qualification: 'M.A., LL.B.',
+      experience: '30+ years in Education Administration',
       icon: Crown,
-      image: "/placeholder.svg?height=150&width=150&text=Chairman",
+      image: '/placeholder.svg?height=150&width=150&text=Chairman',
     },
     {
-      name: "Dr. [Principal Name]",
-      position: "Principal (Ex-Officio Secretary)",
-      category: "Academic",
-      qualification: "Ph.D., M.A., B.Ed.",
-      experience: "25+ years in Higher Education",
+      name: 'Dr. [Principal Name]',
+      position: 'Principal (Ex-Officio Secretary)',
+      category: 'Academic',
+      qualification: 'Ph.D., M.A., B.Ed.',
+      experience: '25+ years in Higher Education',
       icon: Award,
-      image: "/placeholder.svg?height=150&width=150&text=Principal",
+      image: '/placeholder.svg?height=150&width=150&text=Principal',
     },
     {
-      name: "Prof. [Vice Principal Name]",
-      position: "Vice Principal",
-      category: "Academic",
-      qualification: "M.A., M.Phil., Ph.D.",
-      experience: "20+ years in Teaching",
+      name: 'Prof. [Vice Principal Name]',
+      position: 'Vice Principal',
+      category: 'Academic',
+      qualification: 'M.A., M.Phil., Ph.D.',
+      experience: '20+ years in Teaching',
       icon: Users,
-      image: "/placeholder.svg?height=150&width=150&text=VP",
+      image: '/placeholder.svg?height=150&width=150&text=VP',
     },
     {
-      name: "Shri [Treasurer Name]",
-      position: "Treasurer",
-      category: "Management",
-      qualification: "M.Com., C.A.",
-      experience: "15+ years in Finance",
+      name: 'Shri [Treasurer Name]',
+      position: 'Treasurer',
+      category: 'Management',
+      qualification: 'M.Com., C.A.',
+      experience: '15+ years in Finance',
       icon: Briefcase,
-      image: "/placeholder.svg?height=150&width=150&text=Treasurer",
+      image: '/placeholder.svg?height=150&width=150&text=Treasurer',
     },
     {
-      name: "Dr. [Faculty Rep Name]",
-      position: "Faculty Representative",
-      category: "Academic",
-      qualification: "Ph.D. in Science",
-      experience: "18+ years in Research & Teaching",
+      name: 'Dr. [Faculty Rep Name]',
+      position: 'Faculty Representative',
+      category: 'Academic',
+      qualification: 'Ph.D. in Science',
+      experience: '18+ years in Research &amp; Teaching',
       icon: Users,
-      image: "/placeholder.svg?height=150&width=150&text=Faculty",
+      image: '/placeholder.svg?height=150&width=150&text=Faculty',
     },
     {
-      name: "Shri [Alumni Rep Name]",
-      position: "Alumni Representative",
-      category: "Alumni",
-      qualification: "M.A. (Alumni - 1995)",
-      experience: "Social Worker & Entrepreneur",
+      name: 'Shri [Alumni Rep Name]',
+      position: 'Alumni Representative',
+      category: 'Alumni',
+      qualification: 'M.A. (Alumni - 1995)',
+      experience: 'Social Worker &amp; Entrepreneur',
       icon: Award,
-      image: "/placeholder.svg?height=150&width=150&text=Alumni",
+      image: '/placeholder.svg?height=150&width=150&text=Alumni',
     },
   ]
 
   const committees = [
     {
-      name: "Academic Committee",
-      members: ["Principal", "Vice Principal", "All HODs", "Faculty Representatives"],
-      purpose: "Academic planning, curriculum development, and quality assurance",
+      name: 'Academic Committee',
+      members: ['Principal', 'Vice Principal', 'All HODs', 'Faculty Representatives'],
+      purpose: 'Academic planning, curriculum development, and quality assurance',
     },
     {
-      name: "Finance Committee",
-      members: ["Chairman", "Treasurer", "Principal", "Management Representative"],
-      purpose: "Budget planning, financial oversight, and resource allocation",
+      name: 'Finance Committee',
+      members: ['Chairman', 'Treasurer', 'Principal', 'Management Representative'],
+      purpose: 'Budget planning, financial oversight, and resource allocation',
     },
     {
-      name: "Infrastructure Committee",
-      members: ["Management Rep", "Principal", "Admin Officer", "Faculty Rep"],
-      purpose: "Campus development, maintenance, and facility upgrades",
+      name: 'Infrastructure Committee',
+      members: ['Management Rep', 'Principal', 'Admin Officer', 'Faculty Rep'],
+      purpose: 'Campus development, maintenance, and facility upgrades',
     },
     {
-      name: "Student Welfare Committee",
-      members: ["Principal", "Student Counselor", "Faculty Reps", "Student Reps"],
-      purpose: "Student support services, grievance handling, and welfare activities",
+      name: 'Student Welfare Committee',
+      members: ['Principal', 'Student Counselor', 'Faculty Reps', 'Student Reps'],
+      purpose: 'Student support services, grievance handling, and welfare activities',
     },
   ]
 
@@ -96,10 +99,12 @@ const GoverningBody = () => {
           {members.map((member, index) => (
             <div key={index} className="card text-center hover:shadow-xl transition-shadow duration-300">
               <div className="relative mb-4">
-                <img
-                  src={member.image || "/placeholder.svg"}
+                <Image
+                  src={member.image}
                   alt={member.name}
-                  className="w-32 h-32 rounded-full mx-auto object-cover border-4 border-primary-100"
+                  width={128}
+                  height={128}
+                  className="rounded-full mx-auto object-cover border-4 border-primary-100"
                 />
                 <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 bg-primary-600 text-white p-2 rounded-full">
                   <member.icon className="h-5 w-5" />
@@ -113,11 +118,11 @@ const GoverningBody = () => {
                 <div className="flex justify-center">
                   <span
                     className={`px-3 py-1 rounded-full text-xs font-medium ${
-                      member.category === "Management"
-                        ? "bg-blue-100 text-blue-800"
-                        : member.category === "Academic"
-                          ? "bg-green-100 text-green-800"
-                          : "bg-purple-100 text-purple-800"
+                      member.category === 'Management'
+                        ? 'bg-blue-100 text-blue-800'
+                        : member.category === 'Academic'
+                        ? 'bg-green-100 text-green-800'
+                        : 'bg-purple-100 text-purple-800'
                     }`}
                   >
                     {member.category}
@@ -195,7 +200,7 @@ const GoverningBody = () => {
                 <h4 className="font-semibold text-gray-900 mb-4">Contact Information</h4>
                 <div className="space-y-2 text-sm">
                   <p>
-                    <strong>Secretary:</strong> Principal's Office
+                    <strong>Secretary:</strong> Principal&apos;s Office
                   </p>
                   <p>
                     <strong>Phone:</strong> +91-XXXXXXXXXX

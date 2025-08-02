@@ -1,5 +1,6 @@
 import { Award, Target, Heart, Lightbulb } from "lucide-react"
 import Link from "next/link"
+import Image from "next/image"
 
 const AboutSnapshot = () => {
   const highlights = [
@@ -62,11 +63,13 @@ const AboutSnapshot = () => {
             </Link>
           </div>
 
-          {/* Image */}
+          {/* Optimized Image */}
           <div className="relative">
-            <img
-              // src="/placeholder.svg?height=500&width=600&text=College+Building"
+            <Image
+              src="/placeholder.svg?height=500&width=600&text=College+Building"
               alt="College Building"
+              width={600}
+              height={500}
               className="rounded-lg shadow-xl w-full"
             />
             <div className="absolute -bottom-6 -right-6 bg-white p-6 rounded-lg shadow-lg">

@@ -18,31 +18,30 @@ export default function AdminDashboard() {
       return
     }
 
-    // Verify token with backend
-    verifyToken(token)
-  }, [router])
+    const verifyToken = async (token) => {
+      try {
+        const response = await fetch("/api/admin/verify", {
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
+        })
 
-  const verifyToken = async (token) => {
-    try {
-      const response = await fetch("/api/admin/verify", {
-        headers: {
-          Authorization: `Bearer ${token}`,
-        },
-      })
-
-      if (response.ok) {
-        setIsAuthenticated(true)
-      } else {
-        localStorage.removeItem("adminToken")
+        if (response.ok) {
+          setIsAuthenticated(true)
+        } else {
+          localStorage.removeItem("adminToken")
+          router.push("/admin")
+        }
+      } catch (error) {
+        console.error("Token verification failed:", error)
         router.push("/admin")
+      } finally {
+        setLoading(false)
       }
-    } catch (error) {
-      console.error("Token verification failed:", error)
-      router.push("/admin")
-    } finally {
-      setLoading(false)
     }
-  }
+
+    verifyToken(token)
+  }, [router]) // ✅ No more lint error
 
   if (loading) {
     return (

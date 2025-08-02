@@ -37,7 +37,7 @@ const ContactInfo = () => {
       <div className="container-custom">
         <div className="text-center mb-12">
           <h2 className="heading-secondary">Get in Touch</h2>
-          <p className="text-body text-lg">We're here to help you with any questions or information you need</p>
+          <p className="text-body text-lg">We&apos;re here to help you with any questions or information you need</p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -64,7 +64,7 @@ const ContactInfo = () => {
             <h3 className="text-xl font-bold text-gray-900 mb-4">Department Contacts</h3>
             <div className="space-y-3">
               <div className="flex justify-between items-center py-2 border-b border-gray-100">
-                <span className="text-gray-600">Principal's Office</span>
+                <span className="text-gray-600">Principal&apos;s Office</span>
                 <span className="font-medium">Ext: 101</span>
               </div>
               <div className="flex justify-between items-center py-2 border-b border-gray-100">

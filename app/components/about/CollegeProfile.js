@@ -71,7 +71,7 @@ const CollegeProfile = () => {
       <div className="container-custom">
         <div className="text-center mb-12">
           <h2 className="heading-secondary">College Profile</h2>
-          <p className="text-body text-lg">A comprehensive overview of our institution's journey and achievements</p>
+          <p className="text-body text-lg">A comprehensive overview of our institution&apos;s journey and achievements</p>
         </div>
 
         {/* Basic Information */}

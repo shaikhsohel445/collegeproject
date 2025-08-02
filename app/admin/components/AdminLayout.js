@@ -2,6 +2,7 @@
 import { useState } from "react"
 import { useRouter } from "next/navigation"
 import Link from "next/link"
+import Image from "next/image" 
 import {
   Home,
   Users,
@@ -80,7 +81,13 @@ const SidebarContent = ({ navigation, onLogout }) => {
     <div className="flex-1 flex flex-col min-h-0 bg-white border-r border-gray-200">
       <div className="flex-1 flex flex-col pt-5 pb-4 overflow-y-auto">
         <div className="flex items-center flex-shrink-0 px-4">
-          <img className="h-8 w-auto" src="/placeholder.svg?height=32&width=120&text=LTC+Admin" alt="LTC Admin" />
+          {/* ✅ Replaced <img> with <Image> */}
+          <Image
+            src="/placeholder.svg?height=32&width=120&text=LTC+Admin"
+            alt="LTC Admin"
+            width={120}
+            height={32}
+          />
         </div>
         <nav className="mt-5 flex-1 px-2 space-y-1">
           {navigation.map((item) => (

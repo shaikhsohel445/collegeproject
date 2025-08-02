@@ -1,3 +1,4 @@
+import Image from "next/image"
 import { Quote, Award, BookOpen, Users } from "lucide-react"
 
 const PrincipalMessage = () => {
@@ -27,9 +28,11 @@ const PrincipalMessage = () => {
           <div className="relative">
             <div className="card text-center">
               <div className="relative inline-block mb-6">
-                <img
+                <Image
                   src="/placeholder.svg?height=300&width=250&text=Principal"
                   alt="Principal"
+                  width={250}
+                  height={300}
                   className="rounded-lg shadow-lg mx-auto"
                 />
                 <div className="absolute -top-4 -right-4 bg-primary-600 text-white p-3 rounded-full">
@@ -61,7 +64,7 @@ const PrincipalMessage = () => {
 
           {/* Message Content */}
           <div>
-            <h2 className="heading-secondary">Principal's Message</h2>
+            <h2 className="heading-secondary">Principal&apos;s Message</h2>
 
             <div className="space-y-6 text-body text-lg leading-relaxed">
               <div className="relative">
@@ -70,7 +73,7 @@ const PrincipalMessage = () => {
               </div>
 
               <p>
-                It gives me immense pleasure to welcome you to Lokmanya Tilak College, Sevli - an institution that has
+                It gives me immense pleasure to welcome you to Lokmanya Tilak College, Sevli &mdash; an institution that has
                 been a beacon of quality education for over five decades. Our college stands as a testament to the
                 vision of providing accessible, affordable, and excellent higher education to students from all walks of
                 life.
@@ -89,15 +92,15 @@ const PrincipalMessage = () => {
               </p>
 
               <p>
-                I encourage all our students to make the most of the opportunities available here - engage actively in
+                I encourage all our students to make the most of the opportunities available here &mdash; engage actively in
                 academics, participate in extracurricular activities, and develop the skills necessary to become
                 responsible global citizens.
               </p>
 
               <div className="bg-primary-50 p-6 rounded-lg border-l-4 border-primary-600">
                 <p className="italic">
-                  "Education is the most powerful weapon which you can use to change the world. At Lokmanya Tilak
-                  College, we are committed to empowering our students with this weapon of knowledge and wisdom."
+                  &quot;Education is the most powerful weapon which you can use to change the world. At Lokmanya Tilak
+                  College, we are committed to empowering our students with this weapon of knowledge and wisdom.&quot;
                 </p>
               </div>
 

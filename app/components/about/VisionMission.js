@@ -38,7 +38,7 @@ const VisionMission = () => {
             </div>
             <p className="text-body text-lg leading-relaxed">
               To be a leading institution of higher education that empowers students with knowledge, skills, and values
-              necessary to become responsible global citizens and contribute meaningfully to society's progress and
+              necessary to become responsible global citizens and contribute meaningfully to society&apos;s progress and
               development.
             </p>
           </div>
