@@ -20,7 +20,7 @@ export default function AdminDashboard() {
 
     const verifyToken = async (token) => {
       try {
-        const response = await fetch("/api/admin/verify", {
+        const response = await fetch("https://ltcollege.aksharaj878.workers.dev/api/admin/verify", {
           headers: {
             Authorization: `Bearer ${token}`,
           },

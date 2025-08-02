@@ -14,7 +14,7 @@ const PhotoGallery = () => {
 
   const fetchGalleryImages = async () => {
     try {
-      const response = await fetch("/api/gallery?limit=8")
+      const response = await fetch("https://ltcollege.aksharaj878.workers.dev/api/gallery?limit=8")
       if (response.ok) {
         const data = await response.json()
         setImages(data)

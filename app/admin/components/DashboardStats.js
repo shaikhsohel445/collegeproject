@@ -18,7 +18,7 @@ const DashboardStats = () => {
   const fetchStats = async () => {
     try {
       const token = localStorage.getItem("adminToken")
-      const response = await fetch("/api/admin/stats", {
+      const response = await fetch("https://ltcollege.aksharaj878.workers.dev/api/admin/stats", {
         headers: {
           Authorization: `Bearer ${token}`,
         },

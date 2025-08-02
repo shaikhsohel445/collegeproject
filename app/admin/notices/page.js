@@ -20,7 +20,7 @@ export default function AdminNotices() {
   const fetchNotices = async () => {
     try {
       const token = localStorage.getItem("adminToken")
-      const response = await fetch("/api/admin/notices", {
+      const response = await fetch("https://ltcollege.aksharaj878.workers.dev/api/admin/notices", {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -52,7 +52,7 @@ export default function AdminNotices() {
 
     try {
       const token = localStorage.getItem("adminToken")
-      const response = await fetch(`/api/admin/notices/${noticeId}`, {
+      const response = await fetch(`https://ltcollege.aksharaj878.workers.dev/api/admin/notices/${noticeId}`, {
         method: "DELETE",
         headers: {
           Authorization: `Bearer ${token}`,
@@ -70,7 +70,7 @@ export default function AdminNotices() {
   const handleFormSubmit = async (noticeData) => {
     try {
       const token = localStorage.getItem("adminToken")
-      const url = editingNotice ? `/api/admin/notices/${editingNotice.id}` : "/api/admin/notices"
+      const url = editingNotice ? `https://ltcollege.aksharaj878.workers.dev/api/admin/notices/${editingNotice.id}` : "https://ltcollege.aksharaj878.workers.dev/api/admin/notices"
       const method = editingNotice ? "PUT" : "POST"
 
       const response = await fetch(url, {
